@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Hello Express!</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <h1>Hello Express!</h1>
-    <p>Showing <code>pages/index.html</code></p>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Product Gallery</h1>
+
+    <div class="filters">
+      <h3>Filters</h3>
+      <label for="brand">Brand:</label>
+      <input type="text" id="brand" placeholder="Enter brand">
+      <label for="os">Operating System:</label>
+      <input type="text" id="os" placeholder="Enter OS">
+      <label for="price">Price:</label>
+      <input type="number" id="price" placeholder="Enter max price">
+      <label for="ram">RAM (GB):</label>
+      <input type="number" id="ram" placeholder="Enter min RAM">
+
+      <h3>Sort By</h3>
+      <button id="sort-popularity">Sort by Popularity</button>
+      <button id="sort-price-high-to-low">Sort by Price (High to Low)</button>
+      <button id="sort-price-low-to-high">Sort by Price (Low to High)</button>
+    </div>
+
+    <div id="products-list" class="products-list">
+      <!-- Products will be displayed here -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
